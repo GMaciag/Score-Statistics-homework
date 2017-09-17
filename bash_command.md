@@ -1,0 +1,1 @@
+for i in {1..100}; do python rand_seq_gen.py; water -brief -asequence sequence.fasta -bsequence database.fasta -outfile stdout -gapopen 11. -gapextend 1. | awk '/^# Score:/ {print $3;}' >> 100rand; done
